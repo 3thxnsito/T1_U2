@@ -1,13 +1,17 @@
-# T1_U2 - App de tareas y habitos
+# HabitFlow - App de tareas y habitos
 
-Proyecto Flutter con arquitectura MVVM.
+Proyecto Flutter con **Clean Architecture + MVVM**.
 
-## Estructura
-- lib/core: tema, constantes y utilidades
-- lib/data: modelos, repositorios (Repository) y servicios
-- lib/ui: pantallas (view) y estado (view_model)
-- lib/routing: navegacion
+## Capas
+- lib/presentation: pantallas (view) y su estado (view_model). El comedor.
+- lib/domain: entidades, interfaces de repositorios y casos de uso. La cocina.
+- lib/data: modelos, datasources e implementacion de repositorios. La despensa.
+- lib/core: tema, constantes y utilidades.
+- lib/routing: navegacion.
+
+## Regla de dependencias
+presentation -> domain <- data. El dominio no depende de ninguna otra capa.
 
 ## Patrones
-- Repository
-- Singleton (ApiService)
+- Repository: interfaz en domain, implementacion en data.
+- Singleton: servicio de acceso a datos.
