@@ -1,4 +1,4 @@
-# HabitFlow - App de tareas y habitos
+# T1_U2 - App de tareas y habitos
 
 Proyecto Flutter con **Clean Architecture + MVVM**.
 
